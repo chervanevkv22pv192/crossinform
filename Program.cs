@@ -96,10 +96,11 @@ namespace ConsoleApp1
                 }
                 Array.Sort(triplets, Compare);
                 stopwatch.Stop();
-                Console.WriteLine("На выполнение затрачено " + stopwatch.ElapsedMilliseconds + " мс.\nНаиболее часто встречающиеся триплеты:");
+                Console.WriteLine("Наиболее часто встречающиеся триплеты:");
                 for (int i = 0; i < 10; i++)
                     if (triplets[triplets.Length - 1 - i].count > 0)
                         Console.WriteLine(triplets[triplets.Length - 1 - i].triplet + " " + triplets[triplets.Length - 1 - i].count + " вхождений");
+                Console.WriteLine("На выполнение затрачено " + stopwatch.ElapsedMilliseconds + " мс.");
             }
             catch(Exception e) { Console.WriteLine(e.Message); }
 
